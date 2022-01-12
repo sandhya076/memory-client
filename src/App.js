@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Routes,Route} from "react-router-dom";
+import InputForms from "./components/InputForm/InputForm";
+import Home from "./components/Home/Home";
+import UpdateForm from "./components/UpdateForm/UpdateForm1";
+import { useDispatch } from "react-redux";
+import { getMemorie } from "./actions/memories";
+import UpdateForm1 from "./components/UpdateForm/UpdateForm1";
 
-function App() {
+ function App() {
+   const dispatch = useDispatch();
+   dispatch(getMemorie());
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+<Router>
+  <div>
+    <Routes>
+      <Route path= "/" exact element = {<Home/>}/>
+      <Route path= "/InputForm" exact element ={<InputForms/>}/>
+      <Route path="/UpdateForm1" exact element = {<UpdateForm1/>}/>
+      </Routes>
+      </div>
 
-export default App;
+</Router>
+  )
+}
+ export default App;

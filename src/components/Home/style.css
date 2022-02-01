@@ -2,7 +2,7 @@
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 #team {
-    background: #eee !important;
+    background:black;
 }
 
 .btn-primary:hover,
@@ -20,7 +20,7 @@
 }
 
 section {
-    padding: 60px 0;
+    padding: 60px ;
 }
 
 section .section-title {

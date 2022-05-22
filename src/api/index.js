@@ -1,7 +1,7 @@
 import axios from "axios" ;
 
 
-const url = "http://localhost:5000/memories";
+const url = "https://memorie-servers.herokuapp.com/memories";
 
 export const fetchMemorie = () => axios.get(url);
 export const createMemorie = (newMemorie) => axios.post(url,newMemorie);
